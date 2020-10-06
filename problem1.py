@@ -23,9 +23,10 @@ people = ['Alain', 'Brian', 'Chris', 'Justin', 'Angela', 'Rick']
 print(people)
 
 x = input("Choose a person from the list to replace:").strip()
-x = str(x)
 y = input("Enter the replacement:").strip()
-y = str(y)
-people.remove(x)
-people.append(y)
+
+pos = (people.index(x))
+num = people[pos]
+people = [x.replace(num, y) for x in people]
+
 print(people)
